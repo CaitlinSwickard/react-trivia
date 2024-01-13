@@ -1,0 +1,11 @@
+.stat-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 30px;
+    justify-items: center;
+    padding: 1px;
+    font-size: 15px;
+}
