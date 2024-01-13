@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import QuestionCard from "./components/QuestionCard";
 
 const App = () => {
   return (
-    <div>Hello World</div>
-  )
-}
+    <div>
+      <QuestionCard />
+    </div>
+  );
+};
 
-export default App
+export default App;
