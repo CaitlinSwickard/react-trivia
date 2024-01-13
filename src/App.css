@@ -12,3 +12,25 @@
 .title {
     font-size: 50px;
 }
+
+.title {}
+
+.advance-btn {
+    margin: 50px 0px 0px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 0px;
+    justify-items: center;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}

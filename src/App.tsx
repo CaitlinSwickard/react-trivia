@@ -7,60 +7,68 @@ import Reset from "./components/Reset";
 import StatBar from "./components/StatBar";
 
 const App = () => {
-  const allQuestions = questions as Questions;
+    const allQuestions = questions as Questions;
 
-  const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [incorrectAnswers, setIncorrectAnswers] = useState(0);
+    const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0); // set question index
+    const [correctAnswers, setCorrectAnswers] = useState(0); // set correct answers
+    const [incorrectAnswers, setIncorrectAnswers] = useState(0); // set incorrect answers
 
-  const [waitingToAdvance, setWaitingToAdvance] = useState(false);
+    const [waitingToAdvance, setWaitingToAdvance] = useState(false); // set waiting to advance
 
-  const onSubmit = (correct: boolean) => {
-    if (correct) setCorrectAnswers(correctAnswers + 1);
-    else setIncorrectAnswers(incorrectAnswers + 1);
+    // set counters and advance btn
+    const onSubmit = (correct: boolean) => {
+        if (correct) setCorrectAnswers(correctAnswers + 1);
+        else setIncorrectAnswers(incorrectAnswers + 1);
 
-    setWaitingToAdvance(true);
-  };
+        setWaitingToAdvance(true);
+    };
 
-  const advance = () => {
-    setWaitingToAdvance(false);
-    setCurrentQuestionIdx(currentQuestionIdx + 1);
-  };
+    // advance to next question
+    const advance = () => {
+        setWaitingToAdvance(false);
+        setCurrentQuestionIdx(currentQuestionIdx + 1);
+    };
 
-  const reset = () => {
-    setCurrentQuestionIdx(0);
-    setCorrectAnswers(0);
-    setIncorrectAnswers(0);
-    setWaitingToAdvance(false);
-  };
+    // reset the game, all states back to 0
+    const reset = () => {
+        setCurrentQuestionIdx(0);
+        setCorrectAnswers(0);
+        setIncorrectAnswers(0);
+        setWaitingToAdvance(false);
+    };
 
-  if (currentQuestionIdx >= allQuestions.questions.length)
+    // display reset component if reached the end of game
+    if (currentQuestionIdx >= allQuestions.questions.length)
+        return (
+            <Reset
+                totalQuestions={allQuestions.questions.length}
+                correctQuestions={correctAnswers}
+                onPress={reset}
+            />
+        );
+
     return (
-      <Reset
-        totalQuestions={allQuestions.questions.length}
-        correctQuestions={correctAnswers}
-        onPress={reset}
-      />
+        <div>
+            <h1 className="title">2000's Trivia</h1>
+            <StatBar
+                currentQuestion={currentQuestionIdx + 1}
+                totalQuestions={allQuestions.questions.length}
+                correct={correctAnswers}
+                incorrect={incorrectAnswers}
+            />
+            <QuestionCard
+                question={allQuestions.questions[currentQuestionIdx]}
+                onSubmit={onSubmit}
+            />
+            <div className="btn-container">
+                {waitingToAdvance && (
+                    <button onClick={advance} className="advance-btn answer">
+                        Next Question...
+                    </button>
+                )}
+            </div>
+        </div>
     );
-
-  return (
-    <div>
-      <h1>2000's Trivia</h1>
-      <StatBar
-        currentQuestion={currentQuestionIdx + 1}
-        totalQuestions={allQuestions.questions.length}
-        correct={correctAnswers}
-        incorrect={incorrectAnswers}
-      />
-      <QuestionCard
-        question={allQuestions.questions[currentQuestionIdx]}
-        onSubmit={onSubmit}
-      />
-      {waitingToAdvance && (
-        <button onClick={advance}>Next Question...</button>
-      )}
-    </div>
-  );
 };
 
 export default App;
