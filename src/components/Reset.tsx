@@ -1,9 +1,11 @@
+// prop break down for reset
 type Props = {
     totalQuestions: number;
     correctQuestions: number;
     onPress: () => void;
 };
 
+// end of game display component
 function Reset(props: Props) {
     return (
         <div>

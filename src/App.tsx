@@ -7,7 +7,7 @@ import Reset from "./components/Reset";
 import StatBar from "./components/StatBar";
 
 const App = () => {
-    const allQuestions = questions as Questions;
+    const allQuestions = questions as Questions; //getting questions from json file
 
     const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0); // set question index
     const [correctAnswers, setCorrectAnswers] = useState(0); // set correct answers
@@ -15,7 +15,7 @@ const App = () => {
 
     const [waitingToAdvance, setWaitingToAdvance] = useState(false); // set waiting to advance
 
-    // set counters and advance btn
+    // when a choice is selected set counters and advance btn
     const onSubmit = (correct: boolean) => {
         if (correct) setCorrectAnswers(correctAnswers + 1);
         else setIncorrectAnswers(incorrectAnswers + 1);
@@ -60,6 +60,7 @@ const App = () => {
                 question={allQuestions.questions[currentQuestionIdx]}
                 onSubmit={onSubmit}
             />
+            {/* renders when choice is selected */}
             <div className="btn-container">
                 {waitingToAdvance && (
                     <button onClick={advance} className="advance-btn answer">

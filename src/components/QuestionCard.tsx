@@ -7,6 +7,7 @@ type Props = {
     onSubmit: (correct: boolean) => void;
 };
 
+// display the question, render all possible answer choices
 function QuestionCard(props: Props) {
     return (
         <div>

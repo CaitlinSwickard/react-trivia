@@ -11,11 +11,11 @@ type Props = {
 function Answers(props: Props) {
   const [showAnswer, setShowAnswer] = useState(false);
 
-  // allows for the next set of answers to not be selected already
+  // allows for the next set of answers to go back to white font, unselected
   useEffect(() => {
     setShowAnswer(false);
   }, [props.question]);
-  
+
   // checks if the answer pressed on is a match to the correct answer index
   const onPress = (idx: number) => {
     setShowAnswer(true);
@@ -24,6 +24,7 @@ function Answers(props: Props) {
 
   return (
     <div className="answers">
+      
       {props.question.answers.map((answer, idx) => {
         // setting up color to display if answer is correct or not
         let color = "";

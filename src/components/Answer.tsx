@@ -1,4 +1,5 @@
 import './Answer.css';
+
 type Props = {
     onPress: () => void;
     text: string;
@@ -6,6 +7,7 @@ type Props = {
     disabled?: boolean;
 };
 
+// displays correct color for answer and disables btn
 function Answer(props: Props) {
     const style = props.color ? { color: props.color } : {};
     return (

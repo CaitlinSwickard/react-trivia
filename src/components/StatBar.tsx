@@ -1,4 +1,5 @@
 import './StatBar.css';
+
 type Props = {
     currentQuestion: number;
     totalQuestions: number;
@@ -6,6 +7,7 @@ type Props = {
     incorrect: number;
 };
 
+// stat bar component
 function StatBar(props: Props) {
     return (
         <div className="stat-container">
