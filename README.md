@@ -4,16 +4,16 @@ Play Trivia with me! This is a 20 question Trivia Game with Trivia questions bas
 
 This project was created with React using Vite and TypeScript.
 
-Components: 
-StatBar - displays what question you are on and keeps track of score. 
-QuestionCard - displays the question and all answer choices to the question.
-Answers - hold the logic for answers picked. Sets text color to green if correct answer, red if incorrect answer.
-Answer - displays color and disables buttons once pressed on.
+- Components: 
+- StatBar - displays what question you are on and keeps track of score. 
+- QuestionCard - displays the question and all answer choices to the question.
+- Answers - hold the logic for answers picked. Sets text color to green if correct answer, red if incorrect answer.
+- Answer - displays color and disables buttons once pressed on.
 
 Support tutorials:
-https://www.youtube.com/watch?v=SqcY0GlETPk
-https://www.youtube.com/watch?v=Z-7DRZT4DKA
-https://www.youtube.com/watch?v=UX5HIrxbRUc
+- https://www.youtube.com/watch?v=SqcY0GlETPk
+- https://www.youtube.com/watch?v=Z-7DRZT4DKA
+- https://www.youtube.com/watch?v=UX5HIrxbRUc
 
 ## React + TypeScript + Vite
 
