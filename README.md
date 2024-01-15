@@ -1,6 +1,6 @@
 # React-Trivia-Game
 
-Paly Trivia with me! This is a 20 question Trivia Game with Trivia questions based on the 2000's! It will keep your score and advance you to the next question. Once the game is complete you can see your score and try again!
+Play Trivia with me! This is a 20 question Trivia Game with Trivia questions based on the 2000's! It will keep your score and advance you to the next question. Once the game is complete you can see your score and try again!
 
 This project was created with React using Vite and TypeScript.
 
