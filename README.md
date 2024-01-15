@@ -1,4 +1,21 @@
-# React + TypeScript + Vite
+# React-Trivia-Game
+
+Paly Trivia with me! This is a 20 question Trivia Game with Trivia questions based on the 2000's! It will keep your score and advance you to the next question. Once the game is complete you can see your score and try again!
+
+This project was created with React using Vite and TypeScript.
+
+Components: 
+StatBar - displays what question you are on and keeps track of score. 
+QuestionCard - displays the question and all answer choices to the question.
+Answers - hold the logic for answers picked. Sets text color to green if correct answer, red if incorrect answer.
+Answer - displays color and disables buttons once pressed on.
+
+Support tutorials:
+https://www.youtube.com/watch?v=SqcY0GlETPk
+https://www.youtube.com/watch?v=Z-7DRZT4DKA
+https://www.youtube.com/watch?v=UX5HIrxbRUc
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
